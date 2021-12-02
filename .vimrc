@@ -116,7 +116,7 @@ nnoremap <leader>pv :NERDTree % <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<CR>
 nnoremap <silent> + :vertical resize +5<CR>
 nnoremap <silent> _ :vertical resize -5<CR>
-"nmap <C-f> :FZF<CR>
+nmap <leader>F :FZF<CR>
 
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
