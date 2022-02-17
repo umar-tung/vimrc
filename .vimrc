@@ -89,7 +89,10 @@ let g:airline_theme='wombat'
 "   :CocList marketplace - shows all extensions that can be downloaded
 "   :CocUninstall <server> - uninstalls the language server
 " 
-" List of Coc extensions
+" Secret list of coc extensions:
+" https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#use-vims-plugin-manager-for-coc-extension
+"
+" List of installed Coc extensions
 " Extensions to consider:
 " coc-fzf-preview
 let g:coc_global_extensions = [
