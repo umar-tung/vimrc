@@ -20,6 +20,14 @@ set incsearch
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+" basic Plugin Manager commands
+"
+" basic coc commands:
+"   :PlugInstall <pluginName> - Install plugins
+"   :PlugUpdate <pluginName> - Update or install plugins
+"   :PlugClean - Removes unlisted plugins
+" 
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -92,8 +100,6 @@ else
     set signcolumn=yes
 endif
 
-:imap jk <Esc>
-
 let mapleader = " "
 
 if executable('rg')
@@ -107,13 +113,13 @@ let g:netrw_winsize=25
 
 let g:ctrlp_use_caching = 0
 
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>pv :NERDTree % <bar> :vertical resize 30<CR>
-nnoremap <leader>ps :Rg<CR>
+nnoremap <C-h> :wincmd h<CR>
+nnoremap <C-j> :wincmd j<CR>
+nnoremap <C-k> :wincmd k<CR>
+nnoremap <C-l> :wincmd l<CR>
+nnoremap <leader>ut :UndotreeShow<CR>
+nnoremap <leader>ft :NERDTree % <bar> :vertical resize 30<CR>
+nnoremap <leader>rg :Rg<CR>
 nnoremap <silent> + :vertical resize +5<CR>
 nnoremap <silent> _ :vertical resize -5<CR>
 nmap <leader>F :FZF<CR>
