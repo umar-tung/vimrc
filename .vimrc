@@ -87,7 +87,21 @@ let g:airline_theme='wombat'
 "   :CocInstall <server>
 "   :CocList extensions - shows all the extensions that ARE downloaded
 "   :CocList marketplace - shows all extensions that can be downloaded
+"   :CocUninstall <server> - uninstalls the language server
 " 
+" List of Coc extensions
+" Extensions to consider:
+" coc-fzf-preview
+let g:coc_global_extensions = [
+      \'coc-marketplace',
+      \'coc-tsserver',
+      \'coc-pyright',
+      \'coc-html',
+      \'coc-css',
+      \'coc-clangd',
+      \'coc-tailwindcss',
+      \]
+
 set hidden
 set nowritebackup
 set cmdheight=2
@@ -128,6 +142,9 @@ nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
 nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gr <Plug>(coc-references)
+nmap <leader>do <Plug>(coc-codeaction)
+
 
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <leader>cr :CocRestart
+
