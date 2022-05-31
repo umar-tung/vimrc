@@ -17,6 +17,8 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 
+runtime macros/matchit.vim
+
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -45,6 +47,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'airblade/vim-rooter'
+Plug 'Yggdroot/indentline'
 
 call plug#end()
 
@@ -75,6 +78,9 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
+" <CR>: confirm completion, or insert <CR>
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
